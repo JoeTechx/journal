@@ -14,10 +14,10 @@ export const Heading = () => {
     <div className=" max-w-3xl space-y-4">
       <h1 className=" text-3xl sm:text-5xl md:text-6xl font-bold">
         Your Ideas, Document, & Plans. Unified. Welcome to{" "}
-        <span className="underline">Jation</span>
+        <span className="underline">Journal</span>
       </h1>
       <h3 className=" text-base sm:text-xl md:text-2xl font-medium">
-        Jation is the connected workspace where <br />
+      Journal is the connected workspace where <br />
         better, faster work happens.
       </h3>
       {isLoading && (
@@ -29,7 +29,7 @@ export const Heading = () => {
         <>
           <SignInButton mode="modal">
             <Button size="sm">
-              Get Jation free
+              Get Journal free
               <ArrowRight className=" h-4 w-4 ml-2" />
             </Button>
           </SignInButton>
@@ -39,7 +39,7 @@ export const Heading = () => {
       {isAuthenticated && !isLoading && (
         <Button asChild>
           <Link href="/documents">
-            Enter Jation
+            Enter Journal
             <ArrowRight className=" h-4 w-4 ml-2" />
           </Link>
         </Button>

@@ -28,7 +28,7 @@ export const UserItem = () => {
               <AvatarImage src={user?.imageUrl} />
             </Avatar>
             <span className=" text-start font-medium line-clamp-1">
-              {user?.fullName}&apos;s Jation
+              {user?.fullName}&apos;s Journal
             </span>
           </div>
           <ChevronsLeftRight className=" rotate-90 ml-2 text-muted-foreground h-4 w-4" />
@@ -52,7 +52,7 @@ export const UserItem = () => {
             </div>
             <div className="space-y-1">
               <p className=" text-sm line-clamp-1">
-                {user?.fullName}&apos;s Jation
+                {user?.fullName}&apos;s Journal
               </p>
               <p className="text-sm font-medium leading-none text-muted-foreground">
                 {user?.emailAddresses[0].emailAddress.slice(0, 8)}...

@@ -40,7 +40,7 @@ const DocumentsPage = () => {
         alt="Empty"
       />
       <h2 className=" text-lg font-medium">
-        welcome to {user?.firstName}&apos;s Jation
+        welcome to {user?.firstName}&apos;s Journal
       </h2>
       <Button onClick={onCreate}>
         <PlusCircle className=" h-4 w-4 mr-2" />
