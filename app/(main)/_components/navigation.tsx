@@ -161,7 +161,7 @@ export const Navigation = () => {
               className=" p-0 w-72"
               side={isMobile ? "bottom" : "right"}
             >
-              {/* <TrashBox /> */}
+              <TrashBox />
             </PopoverContent>
           </Popover>
         </div>
