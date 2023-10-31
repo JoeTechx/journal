@@ -107,7 +107,7 @@ export const Item = ({
       {!!id && (
         <div
           role="button"
-          className=" h-full rounded-sm hover:bg-neutral-300 dark:bg-neutral-600 mr-1"
+          className=" h-full rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 mr-1"
           onClick={handleExpand}
         >
           <ChevronIcon className=" h-4 w-4 shrink-0 text-muted-foreground/50" />
@@ -148,7 +148,7 @@ export const Item = ({
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <div className="text-xs text-muted-foreground p-2">
-                Last edited by: {user?.fullName}
+                Last edited by:  {user?.username && user.username.charAt(0).toUpperCase() + user.username.slice(1).toLowerCase()}
               </div>
             </DropdownMenuContent>
           </DropdownMenu>
