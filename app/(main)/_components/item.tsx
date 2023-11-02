@@ -89,7 +89,7 @@ export const Item = ({
     toast.promise(promise, {
       loading: "Creating a new note...",
       success: "New note created",
-      error: "Failed to create a new note", 
+      error: "Failed to create a new note",
     });
   };
 
@@ -148,7 +148,10 @@ export const Item = ({
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <div className="text-xs text-muted-foreground p-2">
-                Last edited by:  {user?.username && user.username.charAt(0).toUpperCase() + user.username.slice(1).toLowerCase()}
+                Last edited by:{" "}
+                {user?.username &&
+                  user.username.charAt(0).toUpperCase() +
+                    user.username.slice(1).toLowerCase()}
               </div>
             </DropdownMenuContent>
           </DropdownMenu>
