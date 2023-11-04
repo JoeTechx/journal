@@ -22,19 +22,12 @@ const Error = () => {
         alt="Error"
         className="hidden dark:block"
       />
-     <h2 className="text-[6rem] font-bold">
-  Oops! 😱
-</h2>
-<h3 className="text-[2rem] font-semibold">
-  404 - PAGE NOT FOUND 🙈
-</h3>
-<p className="text-[1.4rem] font-medium">
-  Road is blocked 🚧
-</p>
-<Button asChild>
-  <Link href="/documents">Back to documents now!🚀</Link>
-</Button>
-
+      <h2 className="text-[6rem] font-bold">Oops! 😱</h2>
+      <h3 className="text-[2rem] font-semibold">404 - PAGE NOT FOUND 🙈</h3>
+      <p className="text-[1.4rem] font-medium">Road is blocked 🚧</p>
+      <Button asChild>
+        <Link href="/documents">Back to documents now!🚀</Link>
+      </Button>
     </div>
   );
 };

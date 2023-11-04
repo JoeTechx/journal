@@ -69,7 +69,7 @@ export const DocumentList = ({
 
       {documents.map((document) => (
         <div key={document._id}>
-            <Item 
+          <Item
             id={document._id}
             onClick={() => onRedirect(document._id)}
             label={document.title}
@@ -79,13 +79,10 @@ export const DocumentList = ({
             level={level}
             onExpand={() => onExpand(document._id)}
             expanded={expanded[document._id]}
-            />
-            {expanded[document._id] && (
-                <DocumentList 
-                parentDocumentId={document._id}
-                level={level + 1}
-                />
-            )}
+          />
+          {expanded[document._id] && (
+            <DocumentList parentDocumentId={document._id} level={level + 1} />
+          )}
         </div>
       ))}
     </>

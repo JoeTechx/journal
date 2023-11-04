@@ -45,7 +45,9 @@ export const Cover = ({ url, preview }: CoverProps) => {
       {url && !preview && (
         <div className="opacity-0 group-hover:opacity-100 absolute bottom-5 right-5 flex items-center gap-x-2">
           <Button
-            onClick={() => {coverImage.onReplace(url)}}
+            onClick={() => {
+              coverImage.onReplace(url);
+            }}
             className="text-muted-foreground text-xs"
             variant="outline"
             size="sm"
@@ -69,7 +71,5 @@ export const Cover = ({ url, preview }: CoverProps) => {
 };
 
 Cover.Skeleton = function CoverSkeleton() {
-  return (
-    <Skeleton className="w-full h-[12vh]" />
-  )
-}
+  return <Skeleton className="w-full h-[12vh]" />;
+};

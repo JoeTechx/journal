@@ -42,7 +42,9 @@ export const UserItem = () => {
       >
         <div className="flex flex-col space-y-4 p-2">
           <p className="text-sm font-medium leading-none text-muted-foreground">
-            {user?.username && user.username.charAt(0).toUpperCase() + user.username.slice(1).toLowerCase()}
+            {user?.username &&
+              user.username.charAt(0).toUpperCase() +
+                user.username.slice(1).toLowerCase()}
           </p>
           <div className=" flex items-center gap-x-2">
             <div className=" rounded-full bg-slate-400 p-1">

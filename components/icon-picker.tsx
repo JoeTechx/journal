@@ -24,9 +24,9 @@ export const IconPicker = ({
   const currentTheme = (resolvedTheme || "light") as keyof typeof themeMap;
 
   const themeMap = {
-    "dark": Theme.DARK,
-    "light": Theme.LIGHT,
-    "auto": Theme.AUTO,
+    dark: Theme.DARK,
+    light: Theme.LIGHT,
+    auto: Theme.AUTO,
   };
 
   const theme = themeMap[currentTheme];
