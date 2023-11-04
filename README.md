@@ -1,15 +1,17 @@
 # Welcome to Journal where your Ideas, Document, & Plans. Unified.
 ![journal](https://github.com/JoeTechx/journal/assets/81165398/a12868a7-be36-40e0-bfc1-0317afd37452)
+![journal-removebg-preview](https://github.com/JoeTechx/journal/assets/81165398/5431103f-a96b-4453-9f32-c0068db47eee)
+
 
 
 This is a repository for Fullstack Journal
 ### Popular Technologies
-#### Next.js 13,
-#### React,
-#### Convex,
-#### Tailwind,
-#### Edgestore,
-#### Clerk
+Next.js 13,
+React,
+Convex,
+Tailwind,
+Edgestore,
+Clerk
 
 Key Features:
 
