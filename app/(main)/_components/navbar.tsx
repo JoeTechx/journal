@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "convex/react";
-import { MenuIcon } from "lucide-react";
+import { ArrowBigLeftDash, MenuIcon } from "lucide-react";
 import { useParams } from "next/navigation";
 
 import { api } from "@/convex/_generated/api";
@@ -11,6 +11,8 @@ import { Title } from "./title";
 import { Banner } from "./banner";
 import { Menu } from "./menu";
 import { Publish } from "./publish";
+import Link from "next/link";
+import { multiFormatDateString } from "@/lib/utils";
 
 interface NavbarProps {
   isCollapsed: boolean;
@@ -49,7 +51,13 @@ export const Navbar = ({ isCollapsed, onResetWidth }: NavbarProps) => {
           />
         )}
         <div className=" flex items-center justify-between w-full">
-          <Title initialData={document} />
+          <div className="flex gap-3 items-center">
+            <Title initialData={document} />
+            <p className="subtle-semibold lg:small-regular">
+              {multiFormatDateString(document._creationTime)}
+            </p>
+          </div>
+
           <div className=" flex items-center gap-x-2">
             <Publish initialData={document} />
             <Menu documentId={document._id} />

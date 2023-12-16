@@ -5,3 +5,48 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+export function formatDateString(dateString: string) {
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  };
+
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", options);
+}
+
+export const multiFormatDateString = (timestamp: number = 0): string => {
+  const timestampNum = Math.round(timestamp / 1000);
+  const date: Date = new Date(timestampNum * 1000);
+  const now: Date = new Date();
+
+  const diff: number = now.getTime() - date.getTime();
+  const diffInSeconds: number = diff / 1000;
+  const diffInMinutes: number = diffInSeconds / 60;
+  const diffInHours: number = diffInMinutes / 60;
+  const diffInDays: number = diffInHours / 24;
+
+  switch (true) {
+    case Math.floor(diffInDays) >= 30:
+      return formatDateString(new Date(timestamp).toISOString());
+    case Math.floor(diffInDays) === 1:
+      return `${Math.floor(diffInDays)} day ago`;
+    case Math.floor(diffInDays) > 1 && diffInDays < 30:
+      return `${Math.floor(diffInDays)} days ago`;
+    case Math.floor(diffInHours) >= 1:
+      return `${Math.floor(diffInHours)} hours ago`;
+    case Math.floor(diffInMinutes) >= 1:
+      return `${Math.floor(diffInMinutes)} minutes ago`;
+    default:
+      return "Just now";
+  }
+};
+
+// Example usage:
+const timestamp = 1639651200000; // Replace with your timestamp in milliseconds
+const formattedString = multiFormatDateString(timestamp);
+console.log(formattedString);
